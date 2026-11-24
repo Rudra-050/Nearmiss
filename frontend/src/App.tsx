@@ -2,11 +2,13 @@
 import { RouterProvider } from "react-router-dom"
 import { AuthProvider } from "@/api/AuthContext"
 import { router } from "@/routes/router"
+import { Toaster } from "@/components/ui/toaster"
 
 export default function App() {
   return (
     <AuthProvider>
       <RouterProvider router={router} />
+      <Toaster />
     </AuthProvider>
   )
 }

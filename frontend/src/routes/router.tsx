@@ -11,6 +11,7 @@ import AppLayout from "@/layouts/AppLayout"
 import AuthLayout from "@/layouts/AuthLayout"
 import Login from "@/pages/Login"
 import Placeholder from "@/pages/Placeholder"
+import ReportIncident from "@/pages/ReportIncident"
 
 function RequireAuth() {
   const { user, loading } = useAuth()
@@ -54,7 +55,7 @@ export const router = createBrowserRouter([
         element: <AppLayout />,
         children: [
           { index: true, element: <HomeRedirect /> },
-          { path: "report", element: <Placeholder title="Report an incident" /> },
+          { path: "report", element: <ReportIncident /> },
           { path: "my-reports", element: <Placeholder title="My reports" /> },
           {
             path: "incidents",
